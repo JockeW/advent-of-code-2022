@@ -14,6 +14,6 @@ mod tests {
 
     #[test]
     fn part_one() {
-        assert_eq!(super::part_a(include_str!("input.txt")), 0);
+        assert_eq!(super::part_one(include_str!("input.txt")), 0);
     }
 }
