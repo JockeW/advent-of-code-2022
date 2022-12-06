@@ -22,6 +22,28 @@ pub fn part_one(input: &str) -> usize {
     0
 }
 
+pub fn part_two(input: &str) -> usize {
+    let lines: Vec<&str> = input.lines().collect();
+    let line = lines.first().unwrap();
+
+    let mut chars: Vec<char> = Vec::with_capacity(4);
+    for (i, c) in line.chars().enumerate() {
+        if chars.len() == 14 {
+            let test = chars.iter().collect::<HashSet<&char>>();
+            if test.len() == 14 {
+                return i;
+            }
+            else {
+                chars.remove(0);
+            }
+        }
+
+        chars.push(c);
+    }
+
+    0
+}
+
 #[cfg(test)]
 mod tests {
     #[test]
@@ -32,5 +54,10 @@ mod tests {
     #[test]
     fn part_one() {
         assert_eq!(super::part_one(include_str!("input.txt")), 1794);
+    }
+
+    #[test]
+    fn part_two() {
+        assert_eq!(super::part_two(include_str!("input.txt")), 2851);
     }
 }
