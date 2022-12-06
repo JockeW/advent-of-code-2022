@@ -7,10 +7,10 @@ pub fn part_one(input: &str) -> i64 {
 
 #[cfg(test)]
 mod tests {
-    // #[test]
-    // fn example1() {
-    //     assert_eq!(super::part_one("\n"), 0);
-    // }
+    #[test]
+    fn example1() {
+        assert_eq!(super::part_one(include_str!("example.txt")), 0);
+    }
 
     #[test]
     fn part_one() {
