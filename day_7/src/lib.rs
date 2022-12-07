@@ -70,7 +70,7 @@ pub fn part_one(input: &str) -> usize {
 mod tests {
     #[test]
     fn example1() {
-        assert_eq!(super::part_one(include_str!("example.txt")), 3);
+        assert_eq!(super::part_one(include_str!("example.txt")), 95437);
     }
 
     // #[test]
