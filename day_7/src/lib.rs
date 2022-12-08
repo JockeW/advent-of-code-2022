@@ -39,7 +39,7 @@ pub fn part_one(input: &str) -> usize {
                     current_path = parent_path;
                 } else {
                     //println!("Go to dir");
-                    current_path = &line[5..];
+                    current_path += &line[5..];
                     path_stack.push(current_path);
                     level += 1;
                 }
