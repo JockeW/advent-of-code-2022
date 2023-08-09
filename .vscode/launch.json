@@ -19,6 +19,18 @@
             "program": "${workspaceRoot}/target/debug/foo",
             "args": [],
             "cwd": "${workspaceRoot}",
+        },
+        {
+            "name": "Run Test Debugger",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/buggin-70708b3916187eeb.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "preLaunchTask": "cargo test build",
         }
     ]
 }
